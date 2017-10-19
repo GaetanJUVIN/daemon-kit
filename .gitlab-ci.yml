@@ -1,0 +1,11 @@
+variables:
+  APPLICATION: 'daemonkit'
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - bundle
+    - DAEMON_ENV=test bundle exec rspec spec
